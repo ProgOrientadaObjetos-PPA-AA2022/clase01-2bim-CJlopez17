@@ -22,9 +22,9 @@ public class Ejecutor {
         Edificio edf2 = new Edificio("Edificio norte");
         edf2.establecerCostos(30000);
         Edificio edf3 = new Edificio("Edificio sur");
-        edf3.establecerCostos(5000);
+        edf3.establecerCostos(10000);
         Edificio edf4 = new Edificio("Edificio secundario");
-        edf4.establecerCostos(0.5);
+        edf4.establecerCostos(5000);
         
         Edificio [] listaEfidicio = {edf1,edf2,edf3,edf4};
         
@@ -33,9 +33,8 @@ public class Ejecutor {
         Vehiculo vehs3 = new Vehiculo("Auto", "lbd0012",6000);
         Vehiculo vehs4 = new Vehiculo("Camioneta", "lcc0011",10000);
         Vehiculo vehs5 = new Vehiculo("Camioneta", "ldc0011",25000);
-        Vehiculo vehs6 = new Vehiculo("Camioneta", "ldc0011",25000);
         
-        Vehiculo[] listaVehiculos = {vehs1,vehs2,vehs3,vehs4,vehs5,vehs6};
+        Vehiculo[] listaVehiculos = {vehs1,vehs2,vehs3,vehs4,vehs5};
         
         /*double c = listaEfidicio[1].obtenerCosto();
                 
@@ -47,11 +46,13 @@ public class Ejecutor {
         //  Lista de edificio: edf1, edf2, edf3, edf4
         
         Empresa miEmpresa = new Empresa();
+        
         miEmpresa.establecerNombre("Empresa de Hojas");
         miEmpresa.establecerEdificios(listaEfidicio);
         miEmpresa.establecerCostoBienesInmuebles();
-        miEmpresa.establecerEdificios(listaVehiculos);
+        miEmpresa.establecerVehiculos(listaVehiculos);       
         miEmpresa.establecerCostoVehiculos();
+        miEmpresa.establecerCostoTotalBienes();
         
         
         System.out.printf("%s\n", miEmpresa);

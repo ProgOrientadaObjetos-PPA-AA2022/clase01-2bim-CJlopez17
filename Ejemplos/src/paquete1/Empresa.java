@@ -25,7 +25,7 @@ public class Empresa {
     public void establecerEdificios(Edificio[] m){
         edificios = m;
     }
-    public void establecerVehiculo(Vehiculo[] m){
+    public void establecerVehiculos(Vehiculo[] m){
         vehiculos = m;
     }
     public void establecerCostoBienesInmuebles(){
@@ -68,19 +68,19 @@ public class Empresa {
         String cadena = String.format("Nombre de la empresa: %s\n",nombre);
         cadena = String.format("%s Lista de eficios: \n", cadena);
         for(int i = 0; i < edificios.length;i++){
-            cadena = String.format("%s%d. %s(%.2f)\n",cadena,i++,edificios[i].obtenerNombre().toUpperCase(),
+            cadena = String.format("%s%d. %s (%.2f)\n",cadena,i+1,edificios[i].obtenerNombre().toUpperCase(),
                     edificios[i].obtenerCosto());
         }
-        cadena = String.format("%s Total de inmuebles: %.2f\n", cadena, costoBienesInmuebles);
+        cadena = String.format("%sTotal de inmuebles: %.2f\n\n", cadena, costoBienesInmuebles);
         
-        cadena = String.format("%s Lista vehiculos: ", cadena);
+        cadena = String.format("%s Lista vehiculos: \n", cadena);
         for(int i = 0; i < vehiculos.length; i++){
-            cadena = String.format("%s%d. %s%s(%.2f)\n",cadena, i++, vehiculos[i].obtenerTipo(),
+            cadena = String.format("%s%d. %s %s (%.2f)\n",cadena, i+1, vehiculos[i].obtenerTipo(),
                     vehiculos[i].obtenerMatricula().toUpperCase(),vehiculos[i].obtenerCosto());
         }
-        cadena = String.format("Total de inmueble: %.2f\n", cadena,costoVehiculos);
+        cadena = String.format("%sTotal de inmueble: %.2f\n\n", cadena,costoVehiculos);
         
-        cadena = String.format("%s Total bienes: ",cadena, costoTotalBienes);
+        cadena = String.format("%s Total bienes: %s\n",cadena, costoTotalBienes);
         return cadena; 
     }
 }
