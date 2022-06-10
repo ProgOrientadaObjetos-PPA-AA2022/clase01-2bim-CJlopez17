@@ -1,5 +1,5 @@
 
-package herenciauno;
+package herencia01;
 
 public class Estudiante {
     // 1.  Declarar
